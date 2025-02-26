@@ -117,10 +117,26 @@ aside h2 {
   font-size: 1.7rem;
 }
 
+#nickname {
+  padding: 0.3rem;
+  width: 50px;
+}
+
+#comment {
+  padding: 0.3rem;
+  width: 300px;
+}
+
+#comment-submit {
+  padding: 0.3rem;
+}
+
+.comment {
+  line-height: 24px;
+}
+
 .profile-image {
-  background-image: url("/images/프로필사진.png");
-  background-size: 100%;
-  background-position: center 50%;
+  object-fit: cover;
   width: var(--aside-width);
   height: var(--aside-width);
 

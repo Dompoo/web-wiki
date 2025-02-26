@@ -1,19 +1,31 @@
-console.log(
-  "%c" +
-    " __      __  ______   __  __   ______     " +
-    "\n" +
-    "/\\ \\  __/\\ \\ /\\__  _\\ /\\ \\ /\\ \\ /\\__  _\\    " +
-    "\n" +
-    "\\ \\ \\/\\ \\ \\ \\/_\\/\\ \\/ \\ \\ \\/'/'\\/ _/\\ \\/    " +
-    "\n" +
-    " \\ \\ \\ \\ \\ \\ \\ \\ \\ \\  \\ \\ , <    \\ \\ \\    " +
-    "\n" +
-    "  \\ \\ \\_/ \\_\\ \\ \\_\\ \\__\\ \\ \\\\`\\   \\_\\ \\__ " +
-    "\n" +
-    "   \\ `\\___x___/ /\\_____\\\\ \\_\\ \\_\\ /\\_____\\ " +
-    "\n" +
-    "    '/__//__/  /_____/ \\/_/\\/_/ /_____/",
-  "color: #d81b60; font-size: 16px; font-weight: bold;"
-);
+function addComment() {
+  let nickname = document.getElementById("nickname").value.trim();
+  let comment = document.getElementById("comment").value.trim();
 
-console.log("알맞은 스크립트를 작성하세요");
+  if (!nickname || !comment) {
+      alert("닉네임과 댓글을 입력해주세요.");
+      return;
+  }
+
+  let commentList = document.getElementById("comment-list");
+
+  let commentDiv = document.createElement("div");
+  commentDiv.classList.add("comment");
+
+  let nameSpan = document.createElement("span");
+  nameSpan.classList.add("nickname");
+  nameSpan.textContent = nickname + " : ";
+
+  let commentSpan = document.createElement("span");
+  commentSpan.classList.add("comment-text");
+  commentSpan.textContent = comment;
+
+  commentDiv.appendChild(nameSpan);
+  commentDiv.appendChild(commentSpan);
+
+  commentList.prepend(commentDiv);
+
+  // 입력 필드 초기화
+  document.getElementById("nickname").value = "";
+  document.getElementById("comment").value = "";
+}

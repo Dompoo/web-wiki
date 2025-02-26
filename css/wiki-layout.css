@@ -118,7 +118,7 @@ aside h2 {
 }
 
 .profile-image {
-  background-image: url("../images/프로필사진.png");
+  background-image: url("/images/프로필사진.png");
   background-size: 100%;
   background-position: center 50%;
   width: var(--aside-width);

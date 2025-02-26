@@ -54,6 +54,7 @@ h3.subtitle {
 
 h4 {
   font-size: 1.4rem;
+  margin-top: var(--page-title-margin-y);
   margin-bottom: var(--page-subtitle-margin-y);
 }
 
@@ -62,6 +63,25 @@ article > p {
   line-height: 24px;
   text-indent: 8px;
 }
+li > p {
+  line-height: 24px;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+td {
+  width: calc(100% / 3);
+  height: auto;
+}
+td > img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
 
 section,
 article {
@@ -98,9 +118,9 @@ aside h2 {
 }
 
 .profile-image {
-  background-image: url("https://images.unsplash.com/photo-1618979251882-0b40ef3617f0?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("../images/돔푸-프사.JPG");
   background-size: 100%;
-  background-position: center 100%;
+  background-position: center 50%;
   width: var(--aside-width);
   height: var(--aside-width);
 
@@ -139,6 +159,7 @@ footer p {
 
 :root {
   --page-padding: 48px;
+  --page-title-margin-y: 50px;
   --page-subtitle-margin-y: 32px;
   --page-paragraph-margin-y: 16px;
   --right-sidebar-padding: 32px;
@@ -148,6 +169,8 @@ footer p {
 
   --aside-width: 350px;
   --aside-bg-color: #f6f6f6;
+
+  --gallery-width: 250px;
 
   --divider-color: #efefef;
   --font-default-color: #333;
